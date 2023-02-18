@@ -12,30 +12,30 @@
 
 <body>
     <!-- header part  -->
-    <section class="bg-[#e7f3fa] w-[95%] m-auto rounded-xl p-2 px-5 flex justify-between items-center  mt-5">
+    <section class="bg-[#e7f3fa] w-[95%] m-auto rounded-xl p-2 px-9 flex justify-between items-center  mt-5">
         <div>
             <h1 class="text-3xl font-bold">Interactive</h1>
             <h2 class="text-xl">Geometry Genius</h2>
         </div>
         <div>
-            <button class="bg-blue-500 py-1 px-4 rounded-md text-white">blog</button>
+            <button id="blog-btn" class="bg-blue-500 py-3 px-6 rounded-md text-white">blog</button>
         </div>
     </section>
 
     <!-- card part -->
     <main class="w-4/5 m-auto mt-14 flex gap-5">
         <section id="cards" class="w-3/4 grid grid-cols-3 gap-6">
-            <div class="border text-center rounded flex flex-col justify-between items-center">
+            <div class="border text-center rounded flex flex-col justify-between items-center duration-500 transition-colors random-bg">
                 <div class="w-3/4 p-6 my-5 flex items-center h-full"><img class="" src="images/triangle.png " alt="">
                 </div>
                 <div class="w-full">
                     <div>
                         <h1 id="triangle" class="font-bold text-xl">Triangle</h1>
-                        <h2>Area (A) = 0.5 × <span id="triangle-b">b </span>×<span> h </span></h2>
+                        <h2>Area (A) = 0.5 × <span id="triangle-b">b </span>×<span id="triangle-h"> h </span></h2>
                     </div>
                     <div>
                         <input id="triangle-value-b" class="input" type="text" placeholder="b ="><span>cm</span>
-                        <input id="triangel-value-h" class="input" type="text" placeholder="h ="><span>cm</span>
+                        <input id="triangle-value-h" class="input" type="text" placeholder="h ="><span>cm</span>
                     </div>
                     <div class="w-full">
                         <button id="triangle-calculate" class="calculate-btn">Calculate</button>
@@ -43,7 +43,7 @@
                 </div>
             </div>
 
-            <div class="border text-center rounded flex flex-col justify-between items-center">
+            <div class="border text-center rounded flex flex-col justify-between items-center duration-500 transition-colors random-bg">
                 <div class="w-3/4 p-6 my-5 flex items-center h-full"><img class="" src="images/rectangle.png" alt="">
                 </div>
                 <div class="w-full">
@@ -61,7 +61,7 @@
                 </div>
             </div>
 
-            <div class="border text-center rounded flex flex-col justify-between items-center">
+            <div class="border text-center rounded flex flex-col justify-between items-center duration-500 transition-colors random-bg">
                 <div class="w-3/4 p-6 my-5 flex items-center h-full"><img class="" src="images/parallelogram.png "
                         alt=""></div>
                 <div class="w-full">
@@ -79,7 +79,7 @@
                 </div>
             </div>
 
-            <div class="border text-center rounded flex flex-col justify-between items-center">
+            <div class="border text-center rounded flex flex-col justify-between items-center duration-500 transition-colors random-bg">
                 <div class="w-3/4 p-6 my-5 flex items-center h-full"><img class="" src="images/rhombus.png " alt="">
                 </div>
                 <div class="w-full">
@@ -98,7 +98,7 @@
                 </div>
             </div>
 
-            <div class="border text-center rounded flex flex-col justify-between items-center">
+            <div class="border text-center rounded flex flex-col justify-between items-center duration-500 transition-colors random-bg">
                 <div class="w-3/4 p-6 my-5 flex items-center h-full"><img class="" src="images/pentagon.png " alt="">
                 </div>
                 <div class="w-full">
@@ -116,13 +116,13 @@
                 </div>
             </div>
 
-            <div class="border text-center rounded flex flex-col justify-between items-center">
+            <div class="border text-center rounded flex flex-col justify-between items-center duration-500 transition-colors random-bg">
                 <div class="w-3/4 p-6 my-5 flex items-center h-full"><img class="" src="images/ellipse.png " alt="">
                 </div>
                 <div class="w-full">
                     <div>
                         <h1 id="ellipse" class="font-bold text-xl">Ellipse</h1>
-                        <h2>Area (A) = πab</h2>
+                        <h2>Area (A) = π<span id="ellipse-a">a</span><span id="ellipse-b">b</span></h2>
                     </div>
                     <div>
                         <input id="ellipse-value-a" class="input" type="text" placeholder="b ="><span>cm</span>
@@ -135,16 +135,13 @@
             </div>
         </section>
         <!-- calculate part  -->
-        <section class="w-[35%]">
-            <div class="text-center">
+        <section  class="w-[35%]">
+            <div id="result" class="text-center">
                 <h1 class="border-b-2 border-gray-500 inline-block ">Area Calculation</h1>
-            </div>
-            <div class="flex gap-5 mt-10">
-                <ol id="ol" class="list-decimal ml-5 grid gap-2 grid-cols-3 justify-items-start w-full">
-                </ol>
             </div>
         </section>
     </main>
+<script src="./app.js"></script>
 
 </body>
 
